@@ -1,0 +1,32 @@
+## .NET
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.doccache
+
+## Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.doccache
+*.suo
+*.user
+*.userosscache
+*.sln.doccache
+*.suo
+*.user
+*.userosscache
+*.sln.doccache
+
+## Rider
+.idea/
+*.sln.DotSettings.user
+
+## Secrets and Sensitive Information
+credentials.json
+
+## Publish profiles
+Properties/PublishProfiles/
+Properties/ServiceDependencies/
