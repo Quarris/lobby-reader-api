@@ -37,10 +37,23 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.UseStaticFiles();
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.Use(async (r, next) =>
+{
+    if (r.Request.Path is { HasValue: true, Value: "/" })
+    {
+        r.Response.Redirect("/index.html");
+        return;
+    }
+
+    await next();
+});
 
 app.Run();
